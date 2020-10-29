@@ -1,0 +1,163 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+}
+
+.slider
+{
+height: 100vh;
+width: 100%;
+overflow: hidden;
+visibility:visible;
+  z-index: 20;
+
+}
+.slides{
+  height: 100%;
+  width: 500%;
+  display: flex;
+
+}
+.slides input{
+  display: none;
+}
+
+.slide
+{
+
+ position:relative;
+  width: 20%;
+  transition: 2s;
+}
+.slide ul li{
+  font-family: arial;
+  font-weight: bolder;
+  list-style: none;
+  display: inline-block;
+  padding: 8px 25px;
+  opacity: 1;
+
+}
+.slide ul li::after{
+  content: '';
+  width: 0;
+  height:2px;
+  background: green;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+
+}
+.slide ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  align-items: center;
+}
+.home{
+
+  margin-left: 100px;
+  padding: 10px
+}
+.logo img{
+    padding-left: 250px;
+    width: 120px;
+  }
+.blog
+{
+  margin-left: 100px;
+}
+
+.btn{
+  color: white;
+  font-weight:bold;
+  border:0;
+  padding: 10px 20px;
+  background: rgba(56,213,82,1);
+  cursor: pointer;
+
+}
+.explore{
+  margin: 30px 130px;
+  color: white;
+  font-weight:bold;
+  border:0;
+  padding: 15px 40px;
+  background: rgba(56,213,82,1);
+  cursor: pointer;
+
+}
+
+.one
+{
+
+  margin: 140px 130px;
+  margin-bottom: 30px;
+  color:white;
+  font-weight: 300;
+  font-family: arial;
+  font-style: normal;
+  font-size: 50px;
+  animation: fade 2s linear;
+
+}
+.one1
+{   margin: 20px 130px;
+    margin-bottom: 20px;
+    color:white;
+    font-family: arial;
+    font-weight: 300;
+  font-size: 20px;
+  animation: fade 2s linear;
+}
+@@keyframes fade {
+  0%,100%{opacity:0}
+  50%{opacity: 1}
+  
+}
+
+
+/*Navigation Begin*/
+.navigation-auto
+{
+  transition: 0.6s;
+}
+.navigation-manual
+{
+  border-top: 0;
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+
+}
+.manual-btn
+{
+  border: 5px solid #747478;
+  padding: 5px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+.manual-btn:not(:last-child){
+  margin-right: 20px;
+
+}
+.manual-btn:hover
+{
+  background: #fff;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left:-20%;
+}
+#radio3:checked ~ .first{
+  margin-left:-40%;
+}
